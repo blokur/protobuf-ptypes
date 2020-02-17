@@ -1,0 +1,15 @@
+syntax = "proto3";
+package notifier;
+
+import "google/protobuf/empty.proto";
+import "notifier.proto";
+import "ptypes/index.proto";
+
+service Notifier {
+    // SendNotification creates a notification for a user, always return empty
+    // response no matter the result.
+    rpc SendNotification(SendNotificationRequest) returns (google.protobuf.Empty);
+    // GetNotifications returns a stream of Notification for the requesting
+    // user.
+    rpc GetNotifications(ptypes.User) returns (stream Notification);
+}

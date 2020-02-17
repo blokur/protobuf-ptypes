@@ -1,0 +1,8 @@
+syntax = "proto3";
+package kennel;
+
+message Borker {
+    int32 id = 1;
+    string name = 2;
+    string breed = 3;
+}

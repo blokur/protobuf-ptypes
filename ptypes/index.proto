@@ -1,0 +1,8 @@
+syntax = "proto3";
+package ptypes;
+
+// What the package of the generate go code should look like, this reflects the
+// path in protorepo
+option go_package = "github.com/lzambarda/protorepo/_build/go/ptypes";
+
+message User { int32 id = 1; }

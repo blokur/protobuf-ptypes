@@ -1,0 +1,7 @@
+syntax = "proto3";
+package kennel;
+
+import "kennel.proto";
+import "ptypes/index.proto";
+
+service Kennel { rpc GetBorkersForOwner(ptypes.User) returns (stream Borker); }

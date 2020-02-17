@@ -1,0 +1,18 @@
+syntax = "proto3";
+package notifier;
+
+import "google/protobuf/timestamp.proto";
+
+message Notification {
+    int32 id = 1;
+    string title = 2;
+    string content = 3;
+    google.protobuf.Timestamp created_at = 4;
+    bool read = 5;
+}
+
+message SendNotificationRequest {
+    int32 user_id = 1;
+    string title = 2;
+    string content = 3;
+}
